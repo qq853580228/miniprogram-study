@@ -1,0 +1,14 @@
+<!--pages/list/list.wxml-->
+<import src="/pages/template/list-template.wxml" />
+<view>
+  <swiper indicator-dots indicator-active-color='white' catchtap="carouselToDetail">
+    <swiper-item wx:for="{{swiperItem}}" wx:key="{{item.id}}">
+      <image  data-index="{{index}}" src="{{item.imgUrl}}"></image>
+    </swiper-item>
+  </swiper>
+  <block wx:for="{{listArr}}" wx:key="{{item.postId}}">
+    <view catchtap="toDetail" data-index="{{index}}">
+      <template is="listTmp" data="{{...item}}"/>
+    </view> 
+  </block>
+</view>

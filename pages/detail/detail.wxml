@@ -1,0 +1,24 @@
+<!--pages/detail/detail.wxml-->
+<view class="detailComtailer">
+  <image class="headImg" src="{{isMusicPlay? detailData.music.coverImgUrl : detailData.headImgSrc}}"></image>
+    <image class="musicImg" catchtap="handleMusicPlay" src="{{isMusicPlay ? '/images/music/music-stop.png' : '/images/music/music-start.png'}}"></image>
+  <view class="avatar-date">
+    <image src="{{detailData.avatar}}"></image>
+    <text>{{detailData.author}}</text>
+    <text>发布于</text>
+    <text>{{detailData.date}}</text>
+  </view>
+  <view class="company">
+    <text>{{detailData.title}}</text>
+  </view>
+  <view class="collection-share-container">
+    <view class="collection-share">
+      <image wx:if="{{!isCollected}}" src="/images/icons/collection-anti.png" catchtap="collectionClick"></image>
+      <image wx:else="{{isCollected}}" src="/images/icons/collection.png" catchtap="collectionClick"></image>
+      <image src="/images/icons/share.png" catchtap="shareClick"></image>
+    </view>
+    <view class="line"></view>
+  </view>
+  <button class="btn" open-type="share">转发此文章</button>
+<text class="content">{{detailData.detail_content}}</text>
+</view>

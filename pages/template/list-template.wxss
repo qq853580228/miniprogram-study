@@ -1,0 +1,46 @@
+/* pages/template/list-template.wxss */
+.tmpContainer {
+  display: flex;
+  flex-direction: column;
+  border-top: 1rpx solid #eee;
+  border-bottom: 1rpx solid #eee;
+  margin: 10rpx 0;
+}
+.avatar-date {
+  padding: 20rpx 0 20rpx 10rpx;
+}
+.avatar-date image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 10rpx; 
+}
+.avatar-date {
+  font-size: 28rpx;
+}
+.company {
+  padding: 10rpx;
+}
+.company text {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.contentImg {
+  width: 100%;
+  height: 460rpx;
+}
+.content {
+  text-indent: 2em;
+  padding: 10rpx 0;
+}
+.icon image {
+  width: 32rpx;
+  height: 32rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+.icon text {
+  font-size: 28rpx;
+  margin-right: 10rpx;
+}
